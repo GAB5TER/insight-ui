@@ -1,8 +1,8 @@
 {
-  "name": "@dashevo/insight-ui",
-  "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the Dash network and build your own services with it.",
+  "name": "insight-ui",
+  "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the Galactrum network and build your own services with it.",
   "version": "1.1.1",
-  "repository": "git://github.com/dashevo/insight-ui.git",
+  "repository": "git://github.com/GAB5TER/insight-ui.git",
   "contributors": [
     {
       "name": "Matias Alejo Garcia",
@@ -23,28 +23,31 @@
     {
       "name": "Juan Ignacio Sosa Lopez",
       "email": "bechilandia@gmail.com"
+    },
+    {
+      "name": "GAB5TER",
+      "email": "GAB5TER@protonmail.com"
     }
   ],
   "bugs": {
-    "url": "https://github.com/dashevo/insight-ui/issues"
+    "url": "https://github.com/GAB5TER/insight-ui/issues"
   },
-  "homepage": "https://github.com/dashevo/insight-ui",
+  "homepage": "https://github.com/GAB5TER/insight-ui",
   "license": "MIT",
   "keywords": [
     "insight",
     "blockchain",
     "blockexplorer",
-    "dash",
-    "bitcore-dash",
-    "front-end",
-    "dashcore"
+    "galactrum",
+    "orecore",
+    "front-end"
   ],
-  "dashcoreNode": "dashcore-node",
+  "orecoreNode": "orecore-node",
   "scripts": {
-    "build": "bower install && grunt compile",
+    "build": "bower --allow-root install && grunt compile",
     "watch": "grunt",
     "install-and-build": "npm install && npm run build",
-    "test": "mocha test"
+    "test": "./node_modules/.bin/mocha test"
   },
   "dependencies": {},
   "devDependencies": {
@@ -58,6 +61,7 @@
     "grunt-macreload": "*",
     "grunt-css": "~0.5.4",
     "grunt-markdown": "~0.5.0",
-    "grunt-angular-gettext": "^0.2.15"
+    "grunt-angular-gettext": "^0.2.15",
+    "mocha": "^2.3.3"
   }
 }
