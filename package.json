@@ -1,7 +1,7 @@
 {
   "name": "insight-ui",
   "description": "An open-source frontend for the Insight API. The Insight API provides you with a convenient, powerful and simple way to query and broadcast data on the Galactrum network and build your own services with it.",
-  "version": "1.1.1",
+  "version": "2.0.6",
   "repository": "git://github.com/GAB5TER/insight-ui.git",
   "contributors": [
     {
@@ -27,6 +27,10 @@
     {
       "name": "GAB5TER",
       "email": "GAB5TER@protonmail.com"
+    },
+    {
+      "name": "Anton Suprunchuk",
+      "email": "antouhou@gmail.com"
     }
   ],
   "bugs": {
@@ -47,21 +51,22 @@
     "build": "bower --allow-root install && grunt compile",
     "watch": "grunt",
     "install-and-build": "npm install && npm run build",
-    "test": "./node_modules/.bin/mocha test"
+    "test": "mocha test",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {},
   "devDependencies": {
-    "bower": "~1.2.8",
-    "grunt": "~0.4.2",
-    "grunt-cli": "~0.1.11",
-    "grunt-contrib-jshint": "~0.8.0",
-    "grunt-contrib-concat": "~0.3.0",
-    "grunt-contrib-uglify": "~0.3.2",
-    "grunt-contrib-watch": "*",
-    "grunt-macreload": "*",
+    "bower": "~1.8.8",
+    "grunt": "^1.0.4",
+    "grunt-angular-gettext": "^2.4.1",
+    "grunt-cli": "~1.3.2",
+    "grunt-contrib-concat": "~1.0.1",
+    "grunt-contrib-jshint": "~2.0.0",
+    "grunt-contrib-uglify": "~4.0.0",
+    "grunt-contrib-watch": "~1.1.0",
     "grunt-css": "~0.5.4",
-    "grunt-markdown": "~0.5.0",
-    "grunt-angular-gettext": "^0.2.15",
-    "mocha": "^2.3.3"
+    "grunt-macreload": "*",
+    "grunt-markdown": "~0.7.0",
+    "mocha": "^6.1.3"
   }
 }
